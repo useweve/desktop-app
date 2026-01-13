@@ -1,19 +1,19 @@
 {
-  "version": "0.1.4",
-  "notes": "Versão 0.1.4",
-  "pub_date": "2026-01-13T15:33:00Z",
+  "version": "0.1.5",
+  "notes": "Versão 0.1.5",
+  "pub_date": "2026-01-13T15:57:41Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUNWZRaEw1d3dFU0JIRW9WVXQrRFZHWS81WldQVFBTWFc5cThzNEJhYysySkpJeTJJQ3lOV3RoNTBCMzJpcXcxWldVMGxveWI0b2VBWkUvSk03cnE0QnI3VjM4YmJkTFFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4MzE4MDE2CWZpbGU6V2V2ZS5hcHAudGFyLmd6CnZTV2t1ZFY2SXJoOTBwNXh6WGNoN2kwK1JOZHg3cWR0ZmR2RHJsbTl5K1d4aWliSmhFaXZFOTFhaHlQUE54NXJzZnNMVnVLRk1mWkZnVWt3ZCt5RkNBPT0K",
-      "url": "https://github.com/useweve/desktop-app/releases/download/v0.1.4/Weve.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUNWZRaEw1d3dFU1A0RUwrYmdtSm96bWJUMFl4WTV0RGsvQ1NKTHJPbmhkZEorMDc3OVowOUVkZ0ExK2FnLytJS1lkZ3BNbEZUbHZHSzZ0NjUyRGZiNWdzNzNYSFF1OHdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4MzE5NzE2CWZpbGU6V2V2ZS5hcHAudGFyLmd6CjV1OS9uWCtGbUR6RExjZk9MbndRMlc0OVByZXpUemNlbStCdWgxUGlJd3ZrRDljcTNydUxvWnNodUVjcFNTTnMzNEhkYTI0M3d2RnRsK0plVmE1ZEJ3PT0K",
+      "url": "https://github.com/useweve/desktop-app/releases/download/v0.1.5/Weve.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUNWZRaEw1d3dFU0JIRW9WVXQrRFZHWS81WldQVFBTWFc5cThzNEJhYysySkpJeTJJQ3lOV3RoNTBCMzJpcXcxWldVMGxveWI0b2VBWkUvSk03cnE0QnI3VjM4YmJkTFFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4MzE4MDE2CWZpbGU6V2V2ZS5hcHAudGFyLmd6CnZTV2t1ZFY2SXJoOTBwNXh6WGNoN2kwK1JOZHg3cWR0ZmR2RHJsbTl5K1d4aWliSmhFaXZFOTFhaHlQUE54NXJzZnNMVnVLRk1mWkZnVWt3ZCt5RkNBPT0K",
-      "url": "https://github.com/useweve/desktop-app/releases/download/v0.1.4/Weve.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUNWZRaEw1d3dFU1A0RUwrYmdtSm96bWJUMFl4WTV0RGsvQ1NKTHJPbmhkZEorMDc3OVowOUVkZ0ExK2FnLytJS1lkZ3BNbEZUbHZHSzZ0NjUyRGZiNWdzNzNYSFF1OHdnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4MzE5NzE2CWZpbGU6V2V2ZS5hcHAudGFyLmd6CjV1OS9uWCtGbUR6RExjZk9MbndRMlc0OVByZXpUemNlbStCdWgxUGlJd3ZrRDljcTNydUxvWnNodUVjcFNTTnMzNEhkYTI0M3d2RnRsK0plVmE1ZEJ3PT0K",
+      "url": "https://github.com/useweve/desktop-app/releases/download/v0.1.5/Weve.app.tar.gz"
     },
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUNWZRaEw1d3dFU0dPTXY1MG1MOWN2b2QwK2JPM1Q0VVlvY2owNHIrR3dTYnZzT2w0R0F5c2dkdE1ROG40UENuajNjdVE4N1Fuc29NTnpndWpqcWRya3k4dklTS29xeHdrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4MzE4MzYyCWZpbGU6V2V2ZV8wLjEuNF94NjQtc2V0dXAuZXhlCkFaeklKQ050cGhXRnZmOGpyYlMwR1Q0SDNxNU1QQUpiQTB4R09iNFJYclgyWk5WNW1oYXQ0RkM4NTYrejFCNjkwLzM3TnJsM1pJL1lqUENoQnRlckFnPT0K",
-      "url": "https://github.com/useweve/desktop-app/releases/download/v0.1.4/Weve_0.1.4_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUNWZRaEw1d3dFU0JhbzgycWNDRWo0aGhxUEJUdGE5S0hwcHY4RnIrWFkvck16VHVCaE42bWpXeW92dFBucDF2cFNMV28xZGNrcUFqM0RNZHkxMUNxYTU3RGF6L0dIRndvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY4MzE5ODUwCWZpbGU6V2V2ZV8wLjEuNV94NjQtc2V0dXAuZXhlCjlhQXVDWTVhcGVWOEJRVW1DUG9ST0hFYzdTKytOTlhuQjFBLzRNbWZvWmZOMGtGcWlsVXB6N2pkUG4xSk1lK3QvZEJZVU5aYm9veit4LytUVzVmTURRPT0K",
+      "url": "https://github.com/useweve/desktop-app/releases/download/v0.1.5/Weve_0.1.5_x64-setup.exe"
     }
   }
 }
