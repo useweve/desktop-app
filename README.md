@@ -19,10 +19,13 @@ Baixe a versão mais recente na página de [Releases](https://github.com/useweve
 1. Baixe o arquivo `.dmg` correspondente ao seu Mac
 2. Abra o arquivo `.dmg`
 3. Arraste o app **Weve** para a pasta **Aplicativos**
-4. Na primeira execução, clique com **botão direito** no app → **Abrir**
-5. Clique em **Abrir** no diálogo de confirmação
+4. Abra o **Terminal** e execute:
+   ```bash
+   xattr -cr /Applications/Weve.app
+   ```
+5. Abra o app normalmente
 
-> **Nota:** O aviso de segurança aparece porque o app ainda não possui assinatura da Apple. Isso é seguro - o app é open source e você pode verificar o código.
+> **Nota:** O comando acima remove o atributo de quarentena que o macOS aplica a apps baixados da internet. Isso é necessário porque o app ainda não possui assinatura da Apple. O app é open source e você pode verificar o código.
 
 ### Windows
 
