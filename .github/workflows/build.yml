@@ -119,7 +119,16 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: release/*
-          draft: true
+          draft: false
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update latest.json in repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          cp release/latest.json latest.json
+          git add latest.json
+          git commit -m "chore: update latest.json for ${GITHUB_REF#refs/tags/}" || echo "No changes"
+          git push origin HEAD:main
