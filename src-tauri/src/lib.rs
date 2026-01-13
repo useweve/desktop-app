@@ -1,5 +1,27 @@
 const INIT_SCRIPT: &str = r#"
 (function() {
+    // === TITLE BAR SEPARATOR ===
+    function addTitleBarSeparator() {
+        if (document.getElementById('weve-titlebar-sep')) return;
+        const line = document.createElement('div');
+        line.id = 'weve-titlebar-sep';
+        line.style.cssText = `
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100vw !important;
+            height: 1px !important;
+            background: #e5e5e5 !important;
+            z-index: 2147483647 !important;
+            pointer-events: none !important;
+            transform: none !important;
+        `;
+        document.documentElement.appendChild(line);
+    }
+    addTitleBarSeparator();
+    document.addEventListener('DOMContentLoaded', addTitleBarSeparator);
+
     // === NOTIFICATION BRIDGE ===
     class TauriNotification {
         static permission = 'granted';
@@ -98,6 +120,7 @@ fn create_window(app: &tauri::AppHandle, url: &str) -> tauri::Result<tauri::Webv
     )
     .title("Weve")
     .inner_size(1280.0, 800.0)
+    .shadow(true)
     .initialization_script(INIT_SCRIPT)
     .on_navigation(move |nav_url| {
         // Permite navegação apenas para domínios da Weve
