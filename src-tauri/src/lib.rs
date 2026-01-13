@@ -99,6 +99,7 @@ const INIT_SCRIPT: &str = r#"
 "#;
 
 use tauri_plugin_updater::UpdaterExt;
+use tauri_plugin_dialog::{DialogExt, MessageDialogButtons, MessageDialogKind};
 use std::sync::atomic::{AtomicUsize, Ordering};
 
 static WINDOW_COUNTER: AtomicUsize = AtomicUsize::new(0);
@@ -176,6 +177,7 @@ pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_notification::init())
+        .plugin(tauri_plugin_dialog::init())
         .plugin(tauri_plugin_updater::Builder::new().build())
         .invoke_handler(tauri::generate_handler![open_new_window])
         .setup(|app| {
@@ -199,6 +201,19 @@ pub fn run() {
 async fn check_for_updates(app: tauri::AppHandle) -> Result<(), Box<dyn std::error::Error>> {
     if let Some(update) = app.updater()?.check().await? {
         println!("Atualização disponível: {}", update.version);
+
+        // Pergunta ao usuário se deseja atualizar
+        let confirmed = app.dialog()
+            .message(format!("Nova versão {} disponível. Deseja atualizar agora?", update.version))
+            .title("Atualização disponível")
+            .kind(MessageDialogKind::Info)
+            .buttons(MessageDialogButtons::OkCancelCustom("Atualizar".to_string(), "Depois".to_string()))
+            .blocking_show();
+
+        if !confirmed {
+            println!("Usuário recusou a atualização");
+            return Ok(());
+        }
 
         // Baixa e instala a atualização
         let mut downloaded = 0;
