@@ -3,8 +3,13 @@
   "identifier": "default",
   "description": "Capability for the main window",
   "windows": ["main"],
+  "remote": {
+    "urls": ["https://app.useweve.com/*", "https://*.useweve.com/*"]
+  },
   "permissions": [
     "core:default",
-    "opener:default"
+    "opener:default",
+    "notification:default",
+    "updater:default"
   ]
 }
