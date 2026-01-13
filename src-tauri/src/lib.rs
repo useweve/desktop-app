@@ -89,6 +89,8 @@ fn create_window(app: &tauri::AppHandle, url: &str) -> tauri::Result<tauri::Webv
         format!("window-{}", count)
     };
 
+    let app_handle = app.clone();
+
     tauri::WebviewWindowBuilder::new(
         app,
         &label,
@@ -97,11 +99,33 @@ fn create_window(app: &tauri::AppHandle, url: &str) -> tauri::Result<tauri::Webv
     .title("Weve")
     .inner_size(1280.0, 800.0)
     .initialization_script(INIT_SCRIPT)
-    .on_navigation(|url| {
+    .on_navigation(move |nav_url| {
         // Permite navegação apenas para domínios da Weve
-        url.host_str().map_or(false, |host| {
+        let dominated_weve = nav_url.host_str().map_or(false, |host| {
             host == "app.useweve.com" || host.ends_with(".useweve.com")
-        })
+        });
+
+        if !dominated_weve {
+            // Abre URLs externas no navegador
+            let _ = tauri_plugin_opener::open_url(nav_url.as_str(), None::<&str>);
+        }
+
+        dominated_weve
+    })
+    .on_new_window(move |url, _req| {
+        // Chamado quando o WebView tenta abrir nova janela (menu contexto, etc)
+        let url_str = url.to_string();
+        let is_weve = url.host_str().map_or(false, |host: &str| {
+            host == "app.useweve.com" || host.ends_with(".useweve.com")
+        });
+
+        if is_weve {
+            let _ = create_window(&app_handle, &url_str);
+        } else {
+            let _ = tauri_plugin_opener::open_url(&url_str, None::<&str>);
+        }
+
+        tauri::webview::NewWindowResponse::Deny
     })
     .build()
 }
