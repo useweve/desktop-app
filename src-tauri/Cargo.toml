@@ -1,6 +1,6 @@
 [package]
 name = "weve-desktop"
-version = "0.1.6"
+version = "0.1.7"
 description = "Weve Desktop App"
 authors = ["Weve"]
 edition = "2021"
