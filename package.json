@@ -1,12 +1,12 @@
 {
   "name": "weve-desktop",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "description": "Weve Desktop App",
   "scripts": {
     "tauri": "tauri"
   },
   "license": "MIT",
   "devDependencies": {
-    "@tauri-apps/cli": "^2"
+    "@tauri-apps/cli": "^2.11.1"
   }
 }
